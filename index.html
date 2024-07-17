@@ -10,39 +10,43 @@
     
     <header>
 
-        <div class="header-item">AF</div>
-        <div class="header-item">DISEÑOS</div>
-        <div class="header-item">REDES</div>
+        <div class="header-item"><a href="#Af">AF</a></div>
+        <div class="header-item"><a href="#Diseño">DISEÑOS</a></div>
+        <div class="header-item"><a href="#Redes">REDES</a></div>
 
     </header>
 
-     <div class="main">
+    <div id="Af"></div>
+     <div class="main ">
+      
         <div id="image-track" data-mouse-down-at="0" data-prev-percentage="0">
             <img class="image" src="https://images.unsplash.com/photo-1524781289445-ddf8f5695861?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80" draggable="false" />
-            <img class="image" src="https://images.unsplash.com/photo-1610194352361-4c81a6a8967e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1674&q=80" draggable="false" />  
+           
         </div>
 
 
     </div>
 
-    <div class="welcome">
+    <div class="welcome reveal">
+      
         <p >BIENVENIDOS A AF.</p>
 
     </div>
 
     <div class="design">
 
-        <p> DISEÑOS.</p>
+        <div id="Diseño"></div>
+        <p class="reveal"> DISEÑOS.</p>
 
     </div>
 
 
-    <div class="container">
-        <p class="main-text">LA DAGA</p>
+    <div class="container ">
+        <p class="main-text reveal">LA DAGA</p>
 
 
         
-        <h1 style="font-style: italic;">
+        <h1 class="reveal" style="font-style: italic;">
             Una lanza afilada no necesita
             <span class="magic">
               <span class="magic-star">
@@ -65,7 +69,7 @@
             
           </h1>
         
-        <div class="carousel">
+        <div class="carousel reveal">
             <button class="arrow left" onclick="prevImage()">&#9664;</button>
             <div class="carousel-images">
                 <img src="1.jpg" class="carousel-image" alt="Imagen 1">
@@ -79,9 +83,121 @@
             </div>
             <button class="arrow right" onclick="nextImage()">&#9654;</button>
         </div>
+      </div>
 
 
 
+      
+    <div class="container ">
+      <p class="main-text reveal">OTRO MODELO</p>
+
+
+      
+      <h1 class="reveal" style="font-style: italic;">
+          otra frase
+          <span class="magic">
+            <span class="magic-star">
+              <svg viewBox="0 0 512 512">
+              <path d="M512 255.1c0 11.34-7.406 20.86-18.44 23.64l-171.3 42.78l-42.78 171.1C276.7 504.6 267.2 512 255.9 512s-20.84-7.406-23.62-18.44l-42.66-171.2L18.47 279.6C7.406 276.8 0 267.3 0 255.1c0-11.34 7.406-20.83 18.44-23.61l171.2-42.78l42.78-171.1C235.2 7.406 244.7 0 256 0s20.84 7.406 23.62 18.44l42.78 171.2l171.2 42.78C504.6 235.2 512 244.6 512 255.1z" />
+              </svg>
+            </span>
+            <span class="magic-star">
+              <svg viewBox="0 0 512 512">
+              <path d="M512 255.1c0 11.34-7.406 20.86-18.44 23.64l-171.3 42.78l-42.78 171.1C276.7 504.6 267.2 512 255.9 512s-20.84-7.406-23.62-18.44l-42.66-171.2L18.47 279.6C7.406 276.8 0 267.3 0 255.1c0-11.34 7.406-20.83 18.44-23.61l171.2-42.78l42.78-171.1C235.2 7.406 244.7 0 256 0s20.84 7.406 23.62 18.44l42.78 171.2l171.2 42.78C504.6 235.2 512 244.6 512 255.1z" />
+              </svg>
+            </span>
+            <span class="magic-star">
+              <svg viewBox="0 0 512 512">
+              <path d="M512 255.1c0 11.34-7.406 20.86-18.44 23.64l-171.3 42.78l-42.78 171.1C276.7 504.6 267.2 512 255.9 512s-20.84-7.406-23.62-18.44l-42.66-171.2L18.47 279.6C7.406 276.8 0 267.3 0 255.1c0-11.34 7.406-20.83 18.44-23.61l171.2-42.78l42.78-171.1C235.2 7.406 244.7 0 256 0s20.84 7.406 23.62 18.44l42.78 171.2l171.2 42.78C504.6 235.2 512 244.6 512 255.1z" />
+              </svg>
+            </span>
+            <span class="magic-text" style="font-style: italic;">resaltado</span>
+          </span>
+          
+        </h1>
+      
+      <div class="carousel reveal">
+          <button class="arrow left" onclick="prevImage()">&#9664;</button>
+          <div class="carousel-images">
+              <img src="1.jpg" class="carousel-image" alt="Imagen 1">
+              <img src="2.jpg" class="carousel-image" alt="Imagen 1">
+              <img src="3.jpg" class="carousel-image" alt="Imagen 1">
+              <img src="4.jpg" class="carousel-image" alt="Imagen 1">
+              <img src="5.jpg" class="carousel-image" alt="Imagen 1">
+              <img src="6.jpg" class="carousel-image" alt="Imagen 1">
+              <img src="7.jpg" class="carousel-image" alt="Imagen 1">
+              <!-- Añade más imágenes según sea necesario -->
+          </div>
+          <button class="arrow right" onclick="nextImage()">&#9654;</button>
+      </div>
+    </div>
+
+
+          
+    <div class="container ">
+      <p class="main-text reveal">OTRO MODELO</p>
+
+
+      
+      <h1 class="reveal" style="font-style: italic;">
+          otra frase
+          <span class="magic">
+            <span class="magic-star">
+              <svg viewBox="0 0 512 512">
+              <path d="M512 255.1c0 11.34-7.406 20.86-18.44 23.64l-171.3 42.78l-42.78 171.1C276.7 504.6 267.2 512 255.9 512s-20.84-7.406-23.62-18.44l-42.66-171.2L18.47 279.6C7.406 276.8 0 267.3 0 255.1c0-11.34 7.406-20.83 18.44-23.61l171.2-42.78l42.78-171.1C235.2 7.406 244.7 0 256 0s20.84 7.406 23.62 18.44l42.78 171.2l171.2 42.78C504.6 235.2 512 244.6 512 255.1z" />
+              </svg>
+            </span>
+            <span class="magic-star">
+              <svg viewBox="0 0 512 512">
+              <path d="M512 255.1c0 11.34-7.406 20.86-18.44 23.64l-171.3 42.78l-42.78 171.1C276.7 504.6 267.2 512 255.9 512s-20.84-7.406-23.62-18.44l-42.66-171.2L18.47 279.6C7.406 276.8 0 267.3 0 255.1c0-11.34 7.406-20.83 18.44-23.61l171.2-42.78l42.78-171.1C235.2 7.406 244.7 0 256 0s20.84 7.406 23.62 18.44l42.78 171.2l171.2 42.78C504.6 235.2 512 244.6 512 255.1z" />
+              </svg>
+            </span>
+            <span class="magic-star">
+              <svg viewBox="0 0 512 512">
+              <path d="M512 255.1c0 11.34-7.406 20.86-18.44 23.64l-171.3 42.78l-42.78 171.1C276.7 504.6 267.2 512 255.9 512s-20.84-7.406-23.62-18.44l-42.66-171.2L18.47 279.6C7.406 276.8 0 267.3 0 255.1c0-11.34 7.406-20.83 18.44-23.61l171.2-42.78l42.78-171.1C235.2 7.406 244.7 0 256 0s20.84 7.406 23.62 18.44l42.78 171.2l171.2 42.78C504.6 235.2 512 244.6 512 255.1z" />
+              </svg>
+            </span>
+            <span class="magic-text" style="font-style: italic;">resaltado</span>
+          </span>
+          
+        </h1>
+      
+      <div class="carousel reveal">
+          <button class="arrow left" onclick="prevImage()">&#9664;</button>
+          <div class="carousel-images">
+              <img src="1.jpg" class="carousel-image" alt="Imagen 1">
+              <img src="2.jpg" class="carousel-image" alt="Imagen 1">
+              <img src="3.jpg" class="carousel-image" alt="Imagen 1">
+              <img src="4.jpg" class="carousel-image" alt="Imagen 1">
+              <img src="5.jpg" class="carousel-image" alt="Imagen 1">
+              <img src="6.jpg" class="carousel-image" alt="Imagen 1">
+              <img src="7.jpg" class="carousel-image" alt="Imagen 1">
+              <!-- Añade más imágenes según sea necesario -->
+          </div>
+          <button class="arrow right" onclick="nextImage()">&#9654;</button>
+      </div>
+    </div>
+
+
+    
+    <div class="design">
+      <div id="Redes"></div>
+      <p class="reveal"> REDES.</p>
+
+  </div>
+        
+  <div class="redes reveal">
+    <a href="https://www.instagram.com/afvibess/">
+      <img src="ig.png" alt="Imagen 1">
+    </a>
+
+    <a href="https://www.instagram.com/afvibess/">
+      <img style="width: 12vw;" src="wsp.png" alt="Imagen 2">
+    </a>
+   
+</div>
+
+  
 
 
 

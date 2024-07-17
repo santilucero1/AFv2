@@ -8,6 +8,20 @@ body {
     
 }
 
+
+/* Reveal */
+.reveal {
+  opacity: 0;
+  filter: blur(10px);
+  transition: opacity 2s ease-out, filter 0.5s ease-out;
+}
+
+.reveal.visible {
+  opacity: 1;
+  filter: blur(0);
+}
+
+
 header {
     position: fixed;
     top: 0;
@@ -40,6 +54,15 @@ header h1 {
 .header-item img {
     width: 20px;
     height: 20px;
+}
+.header-item a {
+  color: white;
+  text-decoration: none; /* Elimina el subrayado */
+  cursor: pointer;
+}
+.header-item a:visited,
+.header-item a:link {
+  color: white;
 }
 
 
@@ -280,3 +303,28 @@ body {
     -webkit-text-fill-color: transparent;
     white-space: nowrap;
   }
+
+
+  /* REDES */
+
+  .redes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25vw; /* Espacio entre las imágenes */
+    padding: 10vw;
+}
+
+.redes a {
+  display: inline-block;
+  transition: transform 0.3s ease; /* Animación suave para el hover */
+}
+
+.redes img {
+    width: 10vw; /* Ajusta el tamaño de las imágenes según sea necesario */
+    height: auto;
+}
+
+.redes a:hover {
+  transform: scale(1.1); /* Agranda la imagen un 10% al pasar el cursor */
+}
