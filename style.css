@@ -3,18 +3,189 @@ body {
     width: 100vw;
     background-color: black;
     margin: 0;
-    overflow: hidden;
+    overflow: scroll; /* Permitir el desplazamiento */
     font-family: 'Montserrat', sans-serif;
 }
 
-#main {
+
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color:black;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+   border-bottom:1px solid white;
+}
+header h1 {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+.header-text{
+    color: white;
+}
+
+.header-item {
+    transition: transform 0.3s;
+}
+.header-item:hover {
+    transform: scale(1.2);
+}
+.header-item img {
+    width: 20px;
+    height: 20px;
+}
+
+.diseño-titulo p {
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+}
+
+.diseño-titulo p.visible {
+  opacity: 1;
+}
+
+#image-track {
+  opacity: 0;
+  transition: opacity 4.5s ease-in-out;
+}
+
+#image-track.visible {
+  opacity: 1;
+}
+
+
+/* Ocultar inicialmente los divisores */
+.diseños {
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+}
+
+.diseños.visible {
+  opacity: 1;
+}
+
+/* Ocultar inicialmente los textos de los divisores */
+.nombre-diseño {
+  opacity: 0;
+  transition: opacity 2.5s ease-in-out;
+}
+
+.nombre-diseño.visible {
+  opacity: 1;
+}
+
+
+
+
+:root {  
+    --purple: rgb(162, 142, 31);
+    --violet: rgb(183, 152, 58);
+    --pink: rgb(244, 234, 143);
+  }
+  
+  @keyframes background-pan {
+    from {
+      background-position: 0% center;
+    }
+    
+    to {
+      background-position: -200% center;
+    }
+  }
+  
+  @keyframes scale {
+    from, to {
+      transform: scale(0);
+    }
+    
+    50% {
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    
+    to {
+      transform: rotate(180deg);
+    }
+  }
+  
+
+  h1 {
+    color: white;
+   
+    font-size: 20vmin;
+    font-weight: 400;
+    margin: 0px;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  h1 > .magic {
+    display: inline-block;
+    position: relative;
+  }
+  
+  h1 > .magic > .magic-star {
+    --size: clamp(20px, 1.5vw, 30px);
+    
+    animation: scale 700ms ease forwards;
+    display: block;
+    height: var(--size);
+    left: var(--star-left);
+    position: absolute;
+    top: var(--star-top);
+    width: var(--size);
+  }
+  
+  h1 > .magic > .magic-star > svg {
+    animation: rotate 1000ms linear infinite;
+    display: block;
+    opacity: 0.7;
+  }
+  
+  h1 > .magic > .magic-star > svg > path {
+    fill: var(--violet);
+  }
+  
+  h1 > .magic > .magic-text {
+    animation: background-pan 3s linear infinite;
+    background: linear-gradient(
+      to right,
+      var(--purple),
+      var(--violet),
+      var(--pink),
+      var(--purple)
+    );
+    background-size: 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    white-space: nowrap;
+  }
+
+
+
+.main {
     display: flex;
 }
 
 #white {
     background-color: white;
     height: 100vh;
-    width: 40vw;
+    width: 30vw;
+   
+    
 }
 
 #image-track {
@@ -73,3 +244,94 @@ body {
     
     transform: scale(1.1); /* Amplía el texto al 120% de su tamaño original */
 }
+
+.diseño-titulo {
+
+  display: flex;
+  height: 50vh;
+  background-color: white;
+  text-align: center;
+  justify-content: center;
+
+}
+
+.nombre-diseño .diseño-titulo {
+  
+  padding: 1vmax;
+  height: 7vmax;
+  margin-top: 10vh;
+}
+
+.diseño-titulo p {
+  font-size: 15vh; /* Ajusta este valor según el tamaño deseado */
+  font-weight: bold; /* Opcional: para hacer el texto más grueso */
+}
+
+.nombre-diseño {
+  padding-top: 7vh;
+ 
+}
+
+.nombre-diseño p {
+
+  font-size: 4vh; /* Ajusta este valor según el tamaño deseado */
+   /* Opcional: para hacer el texto más grueso */
+  text-align: center;
+  color: white;
+}
+
+
+.diseños {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  height: 78vh;
+  padding: 0vmax;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+}
+
+.remera-slider {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.remera-slider img {
+  width: auto;
+  height: 50vh;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.nav-button {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+#prev {
+  left: 10px;
+}
+
+#next {
+  right: 10px;
+}
+
+.text-container {
+  margin-left: 20px;
+  color: black;
+  max-width: 300px;
+}
+

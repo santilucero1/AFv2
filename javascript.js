@@ -84,3 +84,113 @@ function wrapLettersInSpans() {
 }
 
 wrapLettersInSpans();
+
+
+
+let index = 0,
+    interval = 1000;
+
+const rand = (min, max) => 
+  Math.floor(Math.random() * (max - min + 1)) + min;
+
+const animate = star => {
+  star.style.setProperty("--star-left", `${rand(-10, 100)}%`);
+  star.style.setProperty("--star-top", `${rand(-40, 80)}%`);
+
+  star.style.animation = "none";
+  star.offsetHeight;
+  star.style.animation = "";
+}
+
+for(const star of document.getElementsByClassName("magic-star")) {
+  setTimeout(() => {
+    animate(star);
+    
+    setInterval(() => animate(star), 1000);
+  }, index++ * (interval / 3))
+}
+
+
+const images = [
+  'shirt.png',
+  'wsp.png',
+  'ig.jpg'
+];
+let currentIndex = 0;
+
+const sliderImage = document.getElementById('slider-image');
+const prevButton = document.getElementById('prev');
+const nextButton = document.getElementById('next');
+
+function showImage(index) {
+  sliderImage.src = images[index];
+}
+
+prevButton.addEventListener('click', () => {
+  currentIndex = (currentIndex > 0) ? currentIndex - 1 : images.length - 1;
+  showImage(currentIndex);
+});
+
+nextButton.addEventListener('click', () => {
+  currentIndex = (currentIndex < images.length - 1) ? currentIndex + 1 : 0;
+  showImage(currentIndex);
+});
+
+// Initialize with the first image
+showImage(currentIndex);
+
+
+// javascript.js
+
+document.addEventListener('DOMContentLoaded', () => {
+  const options = {
+      root: null, // Usar el viewport
+      rootMargin: '0px',
+      threshold: 0.1 // Cuando el 10% del elemento es visible
+  };
+
+  const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+          if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+              // Si quieres que el efecto se aplique solo una vez, puedes desconectar el observador
+              observer.unobserve(entry.target);
+          }
+      });
+  }, options);
+
+  // Selecciona todos los elementos que deseas observar
+  document.querySelectorAll('#main, .diseño-titulo, #diseños, .nombre-diseño').forEach(element => {
+      observer.observe(element);
+  });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  // Opciones para el Intersection Observer
+  const options = {
+    root: null, // Usar la ventana del navegador como el contenedor de observación
+    rootMargin: '0px',
+    threshold: 0.1 // El 10% del elemento debe ser visible para activar el callback
+  };
+
+  // Callback que se ejecuta cuando el elemento entra en la vista
+  const handleIntersection = (entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target); // Deja de observar el elemento una vez que se ha hecho visible
+      }
+    });
+  };
+
+  // Crear el Intersection Observer
+  const observer = new IntersectionObserver(handleIntersection, options);
+
+  // Seleccionar todos los elementos a observar
+  const elementsToObserve = document.querySelectorAll('.diseños, .nombre-diseño, .diseño-titulo p, #image-track');
+
+  // Observar cada elemento
+  elementsToObserve.forEach(element => {
+    observer.observe(element);
+  });
+});
