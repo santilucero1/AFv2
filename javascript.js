@@ -127,3 +127,46 @@ document.addEventListener('DOMContentLoaded', function() {
   window.addEventListener('scroll', revealOnScroll);
   revealOnScroll(); // Ejecuta al cargar la página para los elementos visibles al inicio
 });
+
+
+
+//----------------------------------------
+//Botones de reserva
+
+function openReservation() {
+  window.open('reserva.html', '_blank');
+}
+
+
+//--------------------
+//Pagina de reserva
+
+document.getElementById('reservation-form').addEventListener('submit', function(event) {
+  event.preventDefault();
+
+  // Abrir una nueva pestaña con la dirección especificada
+  window.open('pago.html', '_blank');
+
+  // Crear un formulario oculto para enviar los datos a Formspree
+  let form = document.createElement('form');
+  form.action = 'https://formspree.io/YOUR_FORM_ID';
+  form.method = 'POST';
+  form.style.display = 'none';
+
+  // Copiar los datos del formulario original al formulario oculto
+  Array.from(document.getElementById('reservation-form').elements).forEach(function(element) {
+      if (element.name) {
+          let input = document.createElement('input');
+          input.name = element.name;
+          input.value = element.value;
+          form.appendChild(input);
+      }
+  });
+
+  document.body.appendChild(form);
+  form.submit();
+
+  // Mostrar el mensaje de agradecimiento
+  document.getElementById('reservation-form').style.display = 'none';
+  document.getElementById('thank-you-message').style.display = 'block';
+});

@@ -328,3 +328,38 @@ body {
 .redes a:hover {
   transform: scale(1.1); /* Agranda la imagen un 10% al pasar el cursor */
 }
+
+/* Boton reservar */
+
+/* Centrar el contenedor del botón debajo del carrusel */
+.reserve-button-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Estilizar el botón */
+.reserve-button {
+  margin: 1vh;
+  padding: 2vh;
+  font-size: 16px;
+  background-color: #ffb300;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  
+}
+
+/* Efecto hover para el botón */
+.reserve-button:hover {
+  background-color: #ffd500;
+  
+  color:black;
+}
+
+
+/* PAGINA DE RESERVA */
+
+
+
+
