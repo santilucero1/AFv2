@@ -1,83 +1,79 @@
 body {
-    height: 100vh;
-    width: 100vw;
-    background-color: black;
-    margin: 0;
-     /* Permitir el desplazamiento */
-    font-family: 'Montserrat', sans-serif;
-    
+  height: 100vh;
+  width: 100vw;
+  background-color: black;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
 }
-
 
 .container-reserva {
-    width: 80%;
-    max-width: 600px;
-    margin: auto;
-    padding: 20px;
-    background-color: white;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh; /* Para centrar verticalmente */
-    border-radius: 5%;
-    margin-top: 5vh;
-    margin-bottom: 3vh;
+  width: 80%;
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh; /* Para centrar verticalmente */
+  border-radius: 5%;
+  margin-top: 5vh;
+  margin-bottom: 3vh;
 }
-  
-  form {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    
+
+form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin: 10px 0 5px;
+}
+
+input, select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+button {
+  padding: 10px;
+  background-color: #ffb300;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 100%;
+}
+
+button:hover {
+  background-color: #ffd500;
+}
+
+#thank-you-message {
+  text-align: center;
+}
+
+#thank-you-message img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+  .container-reserva {
+      margin: 10px;
+      padding: 15px;
   }
-  
-  label {
-    margin: 10px 0 5px;
+
+  input, select, button {
+      font-size: 16px;
   }
-  
-  input, select {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-sizing: border-box;
-  }
-  
-  button {
-    padding: 10px;
-    background-color: #ffb300;
-    color: black;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    width: 100%;
-  }
-  
-  button:hover {
-    background-color: #ffd500;
-  }
-  
-  #thank-you-message {
-    text-align: center;
-  }
-  
-  #thank-you-message img {
-    max-width: 100%;
-    height: auto;
-  }
-  
-  /* Responsive styles */
-  @media (max-width: 600px) {
-    .container-reserva {
-        margin: 10px;
-        padding: 15px;
-    }
-  
-    input, select, button {
-        font-size: 16px;
-    }
-  }
+}

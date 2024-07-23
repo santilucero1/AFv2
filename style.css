@@ -342,7 +342,7 @@ body {
   margin: 1vh;
   padding: 2vh;
   font-size: 16px;
-  background-color: #ffb300;
+  background-color: white;
   color: black;
   border: none;
   border-radius: 5px;
@@ -352,7 +352,7 @@ body {
 
 /* Efecto hover para el botón */
 .reserve-button:hover {
-  background-color: #ffd500;
+  background-color: #ffe100;
   
   color:black;
 }
